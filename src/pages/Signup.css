@@ -1,0 +1,76 @@
+/* src/pages/Signup.css */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background, #f8fafc);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.auth-card h1 {
+  margin-bottom: 4px;
+}
+
+.auth-card p {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.auth-form .form-group {
+  margin-bottom: 12px;
+}
+
+.auth-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.form-actions {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.submit-btn {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.link-btn {
+  text-align: center;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}

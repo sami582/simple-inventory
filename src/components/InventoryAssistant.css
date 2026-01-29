@@ -1,0 +1,61 @@
+/* src/components/InventoryAssistant.css */
+.assistant-wrap {
+  max-width: 820px;
+  margin: 18px auto;
+  background: var(--surface, #fff);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm, 0 1px 2px rgba(0,0,0,0.05));
+  padding: 12px;
+}
+
+.assistant-header h3 { margin: 0; }
+.assistant-sub { margin: 4px 0 12px; color: var(--text-secondary, #64748b); font-size: 0.95rem; }
+
+.assistant-messages {
+  max-height: 360px;
+  overflow: auto;
+  padding: 8px;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(248,250,252,1));
+}
+
+.assistant-message { display: flex; margin: 8px 0; }
+.assistant-message.assistant { justify-content: flex-start; }
+.assistant-message.user { justify-content: flex-end; }
+
+.assistant-bubble {
+  max-width: 80%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  color: #0f172a;
+  line-height: 1.4;
+  box-shadow: var(--shadow-sm);
+}
+
+.assistant-message.user .assistant-bubble {
+  background: var(--primary-color, #2563eb);
+  color: white;
+}
+
+.assistant-input {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.assistant-input textarea {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #e2e8f0);
+  resize: vertical;
+}
+.assistant-actions button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary-color, #2563eb);
+  color: white;
+  cursor: pointer;
+}

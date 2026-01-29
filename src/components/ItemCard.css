@@ -1,0 +1,171 @@
+/* Item Card Styles */
+.item-card {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+
+.item-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.item-card.low-stock {
+  border-color: var(--warning-color);
+  background-color: #fffbeb;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.item-name {
+  flex: 1;
+}
+
+.item-name h3 {
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.low-stock-badge {
+  display: inline-block;
+  background-color: var(--warning-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.item-quantity {
+  text-align: right;
+}
+
+.quantity-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1;
+}
+
+.quantity-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.item-card.low-stock .quantity-number {
+  color: var(--warning-color);
+}
+
+.item-category {
+  margin-bottom: 1rem;
+}
+
+.category-tag {
+  display: inline-block;
+  background-color: var(--background);
+  color: var(--text-secondary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  border: 1px solid var(--border-color);
+}
+
+.item-description {
+  margin-bottom: 1rem;
+}
+
+.item-description p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.item-meta {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.item-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.edit-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.delete-btn {
+  background-color: var(--danger-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .item-card {
+    padding: 1rem;
+  }
+  
+  .item-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .item-quantity {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+  
+  .quantity-number {
+    font-size: 1.5rem;
+  }
+  
+  .item-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    text-align: center;
+  }
+}

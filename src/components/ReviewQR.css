@@ -1,0 +1,4 @@
+/* src/components/ReviewQR.css */
+.review-qr-wrap { max-width: 820px; margin: 0 auto; padding: 18px; background: #fff; border-radius: 10px; box-shadow: var(--shadow-sm); }
+.review-qr-wrap h2 { margin-bottom: 6px; }
+.small-msg { color: #0f172a; background: #f1f5f9; padding: 8px; border-radius: 6px; margin-top: 8px; }

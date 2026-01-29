@@ -1,0 +1,241 @@
+/* Dashboard Styles */
+.dashboard-container {
+  width: 100%;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+}
+
+/* ✅ NEW: header actions wrapper */
+.dashboard-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ✅ NEW: report button */
+.report-btn {
+  background: #111;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+
+.report-btn:hover {
+  opacity: 0.9;
+}
+
+.add-item-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.add-item-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Stats Section */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.stat-card.low-stock {
+  border-color: var(--warning-color);
+  background-color: #fffbeb;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-card.low-stock .stat-number {
+  color: var(--warning-color);
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Filters Section */
+.filters-section {
+  display: grid;
+  grid-template-columns: 1fr 200px auto;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: end;
+}
+
+.search-box input,
+.category-filter select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.search-box input:focus,
+.category-filter select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 0.1);
+}
+
+.refresh-btn {
+  padding: 0.75rem 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.refresh-btn:hover {
+  background-color: var(--background);
+}
+
+/* Low Stock Alert */
+.low-stock-alert {
+  background-color: #fffbeb;
+  border: 1px solid #fed7aa;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.low-stock-alert h3 {
+  color: #9a3412;
+  margin-bottom: 0.5rem;
+}
+
+.low-stock-alert p {
+  color: #9a3412;
+  margin-bottom: 1rem;
+}
+
+.low-stock-alert ul {
+  list-style: none;
+  padding: 0;
+}
+
+.low-stock-alert li {
+  padding: 0.25rem 0;
+  color: #9a3412;
+}
+
+/* Items Grid */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+}
+
+.empty-state h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.add-first-item-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.add-first-item-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .dashboard-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .stats-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .filters-section {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .items-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-number {
+    font-size: 2rem;
+  }
+}
